@@ -19,6 +19,7 @@ body {
 
 .sidebar-link{
     transition: all .4s;
+    font-size: 14px;
 }
 
 .sidebar-link:hover{
@@ -31,6 +32,7 @@ body {
     border-radius: 7px;
     box-shadow: 2px 5px 10px #111;
     transition: all .3s;
+    font-size: 14px;
 }
 
 .current:hover{
@@ -42,3 +44,61 @@ body {
 
 /*end of navbar*/
 
+/*top nav*/
+.search-input{
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #999;
+    transition: all .4s;
+}
+
+.search-input:focus{
+    background: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid #ffffff;
+}
+
+.search-button{
+    border: none;
+    border-radius: 50%;
+    padding: 10px 16px;
+    transition: all .4s;
+}
+
+.search-button:focus{
+    box-shadow: none;
+}
+
+.search-button:hover{
+    background-color: #eee;
+}
+
+.icon-parent{ /*icon-parent and icon-bullet is for the little red ball on the icons indicating something to read*/
+    position: relative;
+}
+
+.icon-bullet::after{
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 15px;
+    height: 12px;
+    width: 12px;
+    background-color: #f44336;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px){ /*this class is to solve the "problem" of "fixed-top" for small screens*/
+    .sidebar{
+        position: static;
+        height: auto; /*at the begging it was assigned that heigth would be 100vh*/
+    }
+
+    .top-navbar{ 
+        position: static;
+    }
+}
+
+
+/*end of top nav*/
